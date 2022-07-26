@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "postcss input.css > output.css"
+    "build": "postcss src/**/* -d dist"
   },
   "devDependencies": {
     "cssnano": "^5.1.12",
