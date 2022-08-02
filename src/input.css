@@ -1,3 +1,6 @@
+@import "../node_modules/normalize.css/normalize.css";
+@import "./variables/styles.css";
+
 /* normalize selectors */
 h1::before, h1:before {
     /* reduce shorthand even further */
