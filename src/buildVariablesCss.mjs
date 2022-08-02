@@ -7,7 +7,7 @@ buildVariablesCss();
 function buildVariablesCss() {
   const styleMap = createStyleMap(colors, typography);
   const content = styleMapToString(styleMap);
-  fs.writeFile("./src/variables/styles.css", content);
+  fs.writeFile("./src/variables/output.css", content);
 }
 
 function createStyleMap(...objects) {
