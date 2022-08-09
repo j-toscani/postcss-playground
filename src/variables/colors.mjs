@@ -1,8 +1,12 @@
+const suffixes = [50].concat(
+  Array.from(new Array(9), (_e, i) => (i + 1) * 100)
+);
+
 const data = {
   black: "#000",
   white: "#fff",
 
-  "white-a": createColorObject([
+  "white-a": createColorObject(
     "#fff 4%",
     "#fff 6%",
     "#fff 8%",
@@ -12,10 +16,10 @@ const data = {
     "#fff 48%",
     "#fff 64%",
     "#fff 80%",
-    "#fff 92%",
-  ]),
+    "#fff 92%"
+  ),
 
-  "black-a": createColorObject([
+  "black-a": createColorObject(
     "#000 4%",
     "#000 6%",
     "#000 8%",
@@ -25,10 +29,10 @@ const data = {
     "#000 48%",
     "#000 64%",
     "#000 80%",
-    "#000 92%",
-  ]),
+    "#000 92%"
+  ),
 
-  gray: createColorObject([
+  gray: createColorObject(
     "#F7FAFC",
     "#EDF2F7",
     "#E2E8F0",
@@ -38,10 +42,10 @@ const data = {
     "#4A5568",
     "#2D3748",
     "#1A202C",
-    "#171923",
-  ]),
+    "#171923"
+  ),
 
-  red: createColorObject([
+  red: createColorObject(
     "#FFF5F5",
     "#FED7D7",
     "#FEB2B2",
@@ -51,10 +55,10 @@ const data = {
     "#C53030",
     "#9B2C2C",
     "#822727",
-    "#63171B",
-  ]),
+    "#63171B"
+  ),
 
-  yellow: createColorObject([
+  yellow: createColorObject(
     "#FFFFF0",
     "#FEFCBF",
     "#FAF089",
@@ -64,10 +68,10 @@ const data = {
     "#B7791F",
     "#975A16",
     "#744210",
-    "#5F370E",
-  ]),
+    "#5F370E"
+  ),
 
-  green: createColorObject([
+  green: createColorObject(
     "#F0FFF4",
     "#C6F6D5",
     "#9AE6B4",
@@ -77,10 +81,10 @@ const data = {
     "#25855A",
     "#276749",
     "#22543D",
-    "#1C4532",
-  ]),
+    "#1C4532"
+  ),
 
-  teal: createColorObject([
+  teal: createColorObject(
     "#E6FFFA",
     "#B2F5EA",
     "#81E6D9",
@@ -90,10 +94,10 @@ const data = {
     "#2C7A7B",
     "#285E61",
     "#234E52",
-    "#1D4044",
-  ]),
+    "#1D4044"
+  ),
 
-  cyan: createColorObject([
+  cyan: createColorObject(
     "#EDFDFD",
     "#C4F1F9",
     "#9DECF9",
@@ -103,10 +107,10 @@ const data = {
     "#00A3C4",
     "#0987A0",
     "#086F83",
-    "#065666",
-  ]),
+    "#065666"
+  ),
 
-  purple: createColorObject([
+  purple: createColorObject(
     "#FAF5FF",
     "#E9D8FD",
     "#D6BCFA",
@@ -116,10 +120,10 @@ const data = {
     "#6B46C1",
     "#553C9A",
     "#44337A",
-    "#322659",
-  ]),
+    "#322659"
+  ),
 
-  pink: createColorObject([
+  pink: createColorObject(
     "#FFF5F7",
     "#FED7E2",
     "#FBB6CE",
@@ -129,15 +133,11 @@ const data = {
     "#B83280",
     "#97266D",
     "#702459",
-    "#521B41",
-  ]),
+    "#521B41"
+  ),
 };
 
 export default { name: "colors", data };
-
-const suffixes = [50].concat(
-  Array.from(new Array(9), (_e, i) => (i + 1) * 100)
-);
 
 function createColorObject(...colors) {
   const colorTuples = colors.map((color, index) => [suffixes[index], color]);
