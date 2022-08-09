@@ -1,0 +1,31 @@
+.container {
+    max-width: var(--container-width, 640px);
+}
+
+@media (max-width: 30rem) {
+    body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media (max-width: 48rem) {
+    .container {
+        --container-width: 768px;
+    }
+}
+@media (max-width: 62rem) {
+    .container {
+        --container-width: 1024px;
+    }
+}
+@media (max-width: 80rem) {
+    .container {
+        --container-width: 1280px;
+    }
+}
+@media (max-width: 96rem) {
+    .container {
+        --container-width: 1440px;
+    }
+}
