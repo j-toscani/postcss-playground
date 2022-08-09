@@ -1,11 +1,14 @@
 import fs from "fs/promises";
 import colors from "./variables/colors.mjs";
+import shadows from "./variables/shadows.mjs";
+import radius from "./variables/radius.mjs";
+import spacing from "./variables/spacing.mjs";
 import typography from "./variables/typography.mjs";
 
 buildVariablesCss();
 
 function buildVariablesCss() {
-  const styleMap = createStyleMap(colors, typography);
+  const styleMap = createStyleMap(colors, typography, spacing, radius, shadows);
   const content = styleMapToString(styleMap);
   fs.writeFile("./src/variables/output.css", content);
 }
