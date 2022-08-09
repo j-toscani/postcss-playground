@@ -1,3 +1,5 @@
+import createSpacingScale from "../utils/createSpacingScale.mjs";
+
 const data = {
     "0" : "0px",
     "px": "1px",
@@ -10,17 +12,3 @@ const data = {
 }
 
 export default {name: "spacing", data};
-
-function createSpacingScale(config) {
-    const { start = 0, step = 0.25, unit = "rem", entries = 4} = config;
-    const entryArray = Array.from(new Array(entries), (_e, i) => {
-        return start + step * i
-    })
-
-    const spacingMap = {};
-    for (const entry of entryArray) {
-        spacingMap[Math.floor(entry / 0.25)] = `${entry}${unit}`;
-    }
-
-    return spacingMap
-}
