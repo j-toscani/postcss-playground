@@ -16,7 +16,7 @@ const keys = [
 export default function createTypeScale(config = {}) {
     let {sizes = keys, base = 1, factor = 1.2, unit = "rem"} = config;
     const scale = {
-        text: base + unit
+        default: base + unit
     };
 
     for (const iterator of sizes) {
