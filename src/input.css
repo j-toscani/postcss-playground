@@ -2,6 +2,18 @@
 @import "./variables/output.css";
 @import "./containers.css";
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+button, a {
+    cursor: pointer;
+}
+
 h1,h2,h3,h4,h5,h6,p{
     line-height:1.5
 }
